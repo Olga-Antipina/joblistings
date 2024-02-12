@@ -1,0 +1,61 @@
+.filter_panel {
+    height: auto;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(123, 142, 142, 0.5);
+    padding: 13px 30px;
+    position: absolute;
+    left: 140px;
+    bottom: -24px;
+}
+
+.select_filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.current_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.current_filter__name {
+    line-height: 16px;
+    padding: 6px 8px 4px 8px;
+    border-radius: 4px 0 0 4px;
+    font-weight: 700;
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+}
+
+.current_filter__close {
+    padding: 6px;
+    border-radius: 0 4px 4px 0;
+    background-color: hsl(180, 29%, 50%);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.current_filter__close:hover {
+    background-color: hsl(180, 14%, 20%);
+}
+
+.clear {
+    font-weight: 700;
+    color: hsl(180, 8%, 52%);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.8s;
+}
+
+.clear:hover {
+    color: hsl(180, 29%, 50%);
+    text-decoration: underline;
+}

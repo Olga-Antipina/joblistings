@@ -16,6 +16,4 @@ export const closeFilter = (filter) => {
     };
 };
 
-export const clearFilters = {
-    type: CLEAR_FILTERS,
-};
+export const clearFilters = () => ({ type: CLEAR_FILTERS, });

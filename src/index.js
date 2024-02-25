@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import {Provider} from 'react-redux';
-import {store} from './store/index';
+import { Provider } from 'react-redux';
+import { store, persistor } from './store/index';
+import { PersistGate } from 'redux-persist/integration/react';
+// PersistGate требует
+// - loading, где мы можем поместить компонент прелоудера (что у нас синхронизируются данные)
+// - persistor (то, что создали на уровне стора - persistor)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>
 );
